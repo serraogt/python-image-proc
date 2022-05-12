@@ -1,0 +1,21 @@
+
+import cv2
+path = 'C:\\Users\\C605\\Desktop\\penguenler.jpg'
+
+image = cv2.imread('C:\\Users\\C605\\Desktop\\penguenler.jpg')
+
+blue , green , red = cv2.split(image)
+cv2.imshow('blue',blue)
+cv2.imshow('red',red)
+cv2.imshow('green',green)
+
+
+
+red=red+101
+blue+=10
+green+=202
+
+merged= cv2.merge((blue,green,red))
+cv2.imshow("Merged", merged)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
